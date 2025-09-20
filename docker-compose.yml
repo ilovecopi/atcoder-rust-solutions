@@ -1,0 +1,21 @@
+services: 
+    rust-web:
+
+        build: .
+
+        volumes:
+            - .:/usr/src/atcoder
+            - cargo-cache:/usr/local/cargo/registry
+            - target-cache:/usr/src/app/target
+
+        working_dir: /usr/src/atcoder
+
+        tty: true
+        stdin_open: true
+
+        ports:
+            - "8080:8080"
+
+volumes:
+    cargo-cache:
+    target-cache:
