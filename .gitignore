@@ -1,0 +1,13 @@
+# test files
+*.txt
+input*
+test*
+
+# Rust build
+/target/
+
+# Trunk build output
+/dist/
+
+# macOS system files
+.DS_Store
